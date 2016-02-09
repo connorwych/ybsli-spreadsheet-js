@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Terp List</title> 
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/interpreter-grid.css"/>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript">
+    google.load('visualization', '1');
+    function drawTable() {
+     var query = "SELECT 'First_Name', 'Second_Name', imgurl FROM 1iIuO1P4brlgH9gVtWiiPWxSIRfalRI282K5NhdnJ";
+     var gAPIkey = "&key=AIzaSyDFzFsZGjiI71ZUazhGeDjQHtpKhGz6OlY";
+     var queryText = encodeURIComponent(query);
+     var gvizQuery = new google.visualization.Query('http://www.google.com/fusiontables/gvizdata?tq='  + queryText + gAPIkey);        
+
+        // Send query and draw table with data in response
+        gvizQuery.send(function(response) {
+          if ( response.isError() ) {
+          // Handle it here
+        }
+        console.log(gvizQuery);
+        var numRows = response.getDataTable().getNumberOfRows();
+        var numCols = response.getDataTable().getNumberOfColumns();
+        var myData = response.getDataTable();
+        var ftdata = [];
+        ftdata.push("<div class='row'>");                   // Open Row: TODO: Move inside loop for larger numbers of terps>
+        for(var i=0; i< numRows; i++ ) {
+          ftdata.push("<div class='col-md-2 col-sm-2 col-xs-4 outer-div'>");  // Open entry
+          ftdata.push("<div class='image-div'>");                             // Open image
+          ftdata.push("<img src="+myData.getValue(i,2)+">");
+          ftdata.push("</div>");                                              // Close Image
+          ftdata.push("<div class='text-div'>");                              // Open Text
+          ftdata.push("<p>"+myData.getValue(i,0)+" "+myData.getValue(i,1)+"</p>");
+          ftdata.push("</div>");                                              // Close Text
+          ftdata.push("</div>");                                              // Close entry
+        }        
+        ftdata.push("</div>");                             // Close row
+        document.getElementById('ft-data').innerHTML = ftdata.join('');
+      });
+};
+google.setOnLoadCallback(drawTable);
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="banner">
+      </div>
+      <div class="nav">
+        <ul>
+          <li> Home </li>
+          <li> Interpreters </li>
+          <li> Contact </li>
+          <li> Qualifications </li>
+          <li> Fees </li>
+          <li> Infomation </li>
+          <li> Links </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main"> 
+      <div id="ft-data"></div>
+    </div>  
+  </div>
+</body>
+</html>
+
+
+
+<!-- https://www.googleapis.com/fusiontables/v1/query/?sql=SELECT%20%27First_Name%27%2C%20%27Second_Name%27%2C%20imgurl%20FROM%201iIuO1P4brlgH9gVtWiiPWxSIRfalRI282K5NhdnJ&key=AIzaSyDFzFsZGjiI71ZUazhGeDjQHtpKhGz6OlY&typed=false -->
+
+<!--https://www.google.com/fusiontables/data?docid=16ZtZjotfejVGaxWBXjL4UPHljOYQjUpzDT1xPx6v#rows:id=1 -->
