@@ -1,49 +1,12 @@
 doctype html
 html
   head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Yorkshire BSL Interpreters
     // Include Stylesheets
-    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet', type='text/css')
-    link(rel='stylesheet', href='css/bootstrap.css')
-    //link(rel='stylesheet', type='text/css', href='css/stylesheet.css')
-    link(rel='stylesheet', type='text/css', href='css/interpreter-grid.css')
-    // Javascipt
-    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-    script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
-    script(type='text/javascript', src='https://www.google.com/jsapi')
+    include head.jade
   body
     .container
       .box
-        // Open the container for the shadow
-        .header
-          // Open the header at the top of the page
-          .banner
-          nav.navbar.navbar-inverse
-            .navbar-header
-              button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-              a.navbar-brand(href='#') YBSLI
-            #myNavbar.collapse.navbar-collapse
-              ul.nav.navbar-nav
-                li.active
-                  a(href='http://www.google.com') Home
-                li
-                  a(href='http://www.google.com') Interpreters
-                li
-                  a(href='http://www.google.com') Contact
-                li
-                  a(href='http://www.google.com') Qualifications
-                li
-                  a(href='http://www.google.com') Fees
-                li
-                  a(href='http://www.google.com') Infomation
-                li
-                  a(href='http://www.google.com') Links
-        // Close the header Section
+        include navigation.jade
         .main
           // Open the main content Section
           .row
@@ -59,11 +22,7 @@ html
               p
                 | A simple one click button lets you send an email to all the interpreters listed saving you time and money.
         // Close the main content section
-        .footer
-          // Open the footer section
-          .row
-            .col-md-12
-              p  Webdesign by Connor Wycherley 
+        include footer.jade 
         // Close the footer
       // Close the shadow box
     // Close Main container
