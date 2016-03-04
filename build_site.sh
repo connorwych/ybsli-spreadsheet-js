@@ -7,10 +7,10 @@ for f in *.jade;
 #	echo "Processing $f" 	
 	jade $f --pretty
 done;
-# These files don't exist yet!
-# rm head.html
-# rm navigation.html
-# rm footer.html
+
+rm head.html
+rm navigation.html
+rm footer.html
 mv *.html ../..
 
 #Build CSS file from BootStrap Less files
