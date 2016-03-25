@@ -14,7 +14,8 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:         #2FCC71;
+@brand-secondary:		#27AE60;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -42,7 +43,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  Roboto, Helvetica, Sans-Serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -102,9 +103,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        0px;
+@border-radius-large:       0px;
+@border-radius-small:       0px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -325,6 +326,10 @@
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:         30px;
+
+@row-gutter-height:         80px;
+@row-gutter-width:     	    80px;
+
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint:     @screen-sm-min;
@@ -387,15 +392,14 @@
 @navbar-default-toggle-icon-bar-bg:        #888;
 @navbar-default-toggle-border-color:       #ddd;
 
-
 //=== Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      lighten(@gray-light, 15%);
-@navbar-inverse-bg:                         #222;
+@navbar-inverse-color:                      #444;
+@navbar-inverse-bg:                         @brand-secondary;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+@navbar-inverse-link-color:                 #444;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
@@ -413,6 +417,17 @@
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
 @navbar-inverse-toggle-border-color:        #333;
 
+@navbar-inverse-top-sm:						0px;
+@navbar-inverse-top-md: 					150px;
+@navbar-inverse-top-lg:						150px;
+
+
+//== Header
+//
+//##
+@header-color-primary:						@brand-primary;
+@header-height-lg:							200px;
+@header-height-sm:							@navbar-height;
 
 //== Navs
 //
