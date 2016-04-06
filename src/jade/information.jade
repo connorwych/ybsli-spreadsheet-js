@@ -1,0 +1,37 @@
+- var pageName          = "information";
+- var navTitle          = "Information"
+- var pageTitle         = "Yorkshire BSL Interpreters | Information";
+- var pageDescription   = "Portal for BSL/English interpreting services";
+- var pageURL           = "information.html";
+
+doctype html
+html
+  head
+    include head.jade
+  body
+    .container
+      .box
+        include navigation.jade
+        .main
+          .row
+            .lcolumn.col-md-12
+              include breadcrumb.jade
+                
+            .lcolumn.col-md-8
+              h1 Information
+              p An interpreter is a trained bilingual who can translate quickly and efficiently between spoken English and British Sign Language (BSL). They will work in a variety of situations (medical, legal, meetings, workplace, conferences etc) to ensure that all parties communicate effectively with each other.
+              p Depending on the level of qualification of the interpreter they may be suitable for different types of work. All the interpreters listed are qualified to work across a range of different situations, with some also  specialising in legal and/or mental health bookings.
+              p Information about the requirement for qualified interpreters to be booked and the responsibility for organisations to provide this as a service can be found at the 
+                a(href="https://www.gov.uk/rights-disabled-person") Gov.org Website
+              p Information regarding the duty to provide a British Sign Language/English Interpreter under the Disability Discrimination Act 1995 is available at the 
+                a(href="http://www.equalityhumanrights.com/advice-and-guidance/before-the-equality-act/guidance-for-service-providers-pre-october-2010/good-medical-practice-and-disability-equality/1-the-disability-discrimination-act-1995-dda-a-brief-explanation/") Equality and Human Rights Commission website.
+              p More information regarding the regulation of BSL interpreters can be found at 
+                a(href="http://www.nrcpd.org.uk/") NRCPD
+                | , including details on how to complain about an interpreter.
+            .rcolumn.col-md-4
+              h2  About 
+              p
+                | This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live locally.
+              p
+                | A simple one click button lets you send an email to all the interpreters listed saving you time and money.
+        include footer.jade 

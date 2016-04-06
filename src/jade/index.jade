@@ -1,18 +1,29 @@
-- var pageTitle =  "Yorkshire BSL Interpreters";
-- var pageDescription = "Portal for BSL/English interpreting services";
+- var pageName          = "index";
+- var navTitle          = "Home"
+- var pageTitle         = "Yorkshire BSL Interpreters";
+- var pageDescription   = "Portal for BSL/English interpreting services";
+- var pageURL           = "index.html";
 
 doctype html
 html
   head
-    // Include Stylesheets
     include head.jade
   body
     .container
       .box
         include navigation.jade
         .main
-          // Open the main content Section
           .row
+            .lcolumn.col-md-12
+                if pageName=="index" 
+                  ol 
+                    li
+                      a(href='index.html')= pageTitle
+                else 
+                  ol
+                    li Yorkshire BSL Interpreters
+                    li= pageTitle
+                
             .lcolumn.col-md-8
               h1  Yorkshire BSL Interpreters 
               p

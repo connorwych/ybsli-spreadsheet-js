@@ -6767,9 +6767,29 @@ button.close {
 .box {
   box-shadow: 0px 0px 10px 10px #999;
 }
+@media (min-width: 1000px) {
+  .main {
+    padding: 50px 65px 75px 65px;
+  }
+}
+@media (max-width: 1000px) {
+  .main {
+    padding: 25px 27.5px;
+  }
+}
 .footer {
   background: #444;
   color: white;
+}
+@media (min-width: 1000px) {
+  .footer {
+    padding: 25px 65px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer {
+    padding: 12.5px 27.5px;
+  }
 }
 .footer p {
   font-size: 12px;
@@ -6778,6 +6798,17 @@ button.close {
   background-color: #1c7943;
   border: none;
   border-radius: 0px;
+}
+@media (min-width: 1000px) {
+  .navbar-ybsli {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .navbar-ybsli {
+    padding: 0px;
+  }
 }
 @media (min-width: 768px) {
   .navbar-ybsli {
@@ -6826,6 +6857,10 @@ button.close {
 .navbar-ybsli .navbar-toggle:hover,
 .navbar-ybsli .navbar-toggle:focus {
   background-color: #000000;
+}
+.navbar-ybsli .navbar-toggle:hover .icon-bar,
+.navbar-ybsli .navbar-toggle:focus .icon-bar {
+  background-color: white;
 }
 .navbar-ybsli .navbar-toggle .icon-bar {
   background-color: #092615;
@@ -6908,4 +6943,23 @@ fieldset[disabled] .navbar-ybsli .btn-link:focus {
   .banner {
     height: 200px;
   }
+}
+.ybsli-breadcrumb ol {
+  padding: 0px;
+  margin: 0px;
+}
+.ybsli-breadcrumb ol li {
+  display: inline-block;
+  text-decoration: none;
+}
+.ybsli-breadcrumb ol li a {
+  color: #777777;
+  font-size: 1em;
+}
+.ybsli-breadcrumb ol li:before {
+  color: #777777;
+  content: " / ";
+}
+.ybsli-breadcrumb ol li:first-child:before {
+  content: none;
 }

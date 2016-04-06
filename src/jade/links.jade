@@ -1,0 +1,31 @@
+- var pageName          = "Links";
+- var pageTitle         = "Yorkshire BSL Interpreters | Links";
+- var navTitle          = "Links";
+- var pageDescription   = "Portal for BSL/English interpreting services";
+- var pageURL           = "links.html";
+
+doctype html
+html
+  head
+    include head.jade
+  body
+    .container
+      .box
+        include navigation.jade
+        .main
+          .row
+            .lcolumn.col-md-12
+              include breadcrumb.jade
+            .lcolumn.col-md-8
+              h1 Links
+              p Contact details of interpreters and translators of community spoken languages in the region can be found at 
+                a(href="http://yti.org.uk/") Yorkshire Translators and Interpreters.
+              p Other regions in the country also list local qualified and trainee interpreters, with info on contacting and booking:
+              a(href="http://www.northeast-bslenglish-interpreters.co.uk/") North East England
+            .rcolumn.col-md-4
+              h2  About 
+              p
+                | This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live locally.
+              p
+                | A simple one click button lets you send an email to all the interpreters listed saving you time and money.
+        include footer.jade 

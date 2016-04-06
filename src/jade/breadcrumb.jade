@@ -1,0 +1,8 @@
+.ybsli-breadcrumb
+	ol 
+		li
+			a(href='index.html') YBSLI
+			if pageName!='index.html'
+				li
+					a(href= pageURL)= navTitle
+				

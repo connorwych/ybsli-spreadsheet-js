@@ -3,6 +3,15 @@
   background-color: @ybsli-banner-secondary;
   border: none;
   border-radius: 0px;
+ 
+ @media(min-width: @ybsli-content-break-point) {
+    padding-left: @ybsli-content-padding;
+    padding-right: @ybsli-content-padding;
+  }
+
+  @media(max-width: @ybsli-content-break-point){
+    padding: 0px;
+  }
 
   @media(min-width: @grid-float-breakpoint) {
     top: @ybsli-banner-height-lg - @navbar-height;
@@ -59,10 +68,16 @@
     &:hover,
     &:focus {
       background-color: @ybsli-banner-toggle-hover-bg;
+      .icon-bar {
+        background-color: white;
+      }
+
     }
     .icon-bar {
       background-color: @ybsli-banner-toggle-icon-bar-bg;
+    
     }
+
   }
 
   .navbar-collapse,
