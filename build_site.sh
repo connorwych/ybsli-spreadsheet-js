@@ -11,6 +11,7 @@ done;
 rm head.html
 rm navigation.html
 rm footer.html
+rm breadcrumb.html
 mv *.html ../..
 
 #Build CSS file from BootStrap Less files

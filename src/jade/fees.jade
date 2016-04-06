@@ -1,0 +1,41 @@
+- var pageName          = "fees";
+- var navTitle          = "Fees";
+- var pageTitle         = "Yorkshire BSL Interpreters | Fees";
+- var pageDescription   = "Portal for BSL/English interpreting services";
+- var pageURL           = "fees.html";
+
+doctype html
+html
+  head
+    include head.jade
+  body
+    .container
+      .box
+        include navigation.jade
+        .main
+          .row
+            .lcolumn.col-md-12
+              include breadcrumb.jade
+            .lcolumn.col-md-8
+              h1 Fees
+              p Freelance interpreters will have a minimum fee for their work. This will vary from person to person, please ask when you are making a booking.
+
+              p The cost payable depends on a number of factors including:
+              ul
+                li The type of the assignment (e.g. Legal work is typically more expensive)
+                li The times and duration of the assignment.
+                li The qualifications and experience of the interpreter.
+                li The mileage/travel costs.
+              p Longer assignments may need a second interpreter to be booked in order to co-work. You will receive professional advice from whoever you are in contact with.
+
+              p Please be aware that cancellation fees are often applicable. Please check with the interpreter when discussing the booking.
+
+              p An indication of a range of typical fees charged can be found on the ASLI website 
+                a(href='http://www.asli.org.uk/fees-salaries-report-p122.aspx') (http://www.asli.org.uk/fees-salaries-report-p122.aspx) 
+            .rcolumn.col-md-4
+              h2  About 
+              p
+                | This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live locally.
+              p
+                | A simple one click button lets you send an email to all the interpreters listed saving you time and money.
+        include footer.jade 

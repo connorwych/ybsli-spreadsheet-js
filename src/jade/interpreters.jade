@@ -1,0 +1,38 @@
+- var pageName          = "index";
+- var pageTitle         = "Yorkshire BSL Interpreters";
+- var pageDescription   = "Portal for BSL/English interpreting services";
+- var pageURL           = "index.html";
+
+doctype html
+html
+  head
+    include head.jade
+  body
+    .container
+      .box
+        include navigation.jade
+        .main
+          .row
+            .lcolumn.col-md-12
+              .ybsli-breadcrumb
+                if pageName=="index" 
+                  ol 
+                    li
+                      a(href='index.html')= pageTitle
+                else 
+                  ol
+                    li Yorkshire BSL Interpreters
+                    li= pageTitle
+                
+            .lcolumn.col-md-8
+              h1  Yorkshire BSL Interpreters 
+              p
+                | Welcome to Yorkshire BSL Interpreters, This is the website for freelance British Sign Language (BSL) interpreters from the Yorkshire region. All the interpreters listed are fully qualified and work entirely on a freelance capacity. Please click on the Interpreters tab to contact us individually or collectively.
+              p  Use the links to find out more about the services that we offer. 
+            .rcolumn.col-md-4
+              h2  About 
+              p
+                | This website is a quick and convenient way for you to contact qualified, registered British Sign Language interpreters who live locally.
+              p
+                | A simple one click button lets you send an email to all the interpreters listed saving you time and money.
+        include footer.jade 

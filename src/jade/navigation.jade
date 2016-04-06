@@ -1,3 +1,4 @@
+- var pages = { "Home": "index.html", "Interpreters": "interpreters.html", "Contact": "contact.html","Qualifications": "qualifications.html", "Fees": "fees.html", "Information": "information.html", "Links": "links.html" }
 .header
   .banner
   nav.navbar.navbar-ybsli
@@ -9,17 +10,10 @@
       a.navbar-brand(href='#') YBSLI
     #myNavbar.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li.active
-          a(href='http://www.google.com') Home
-        li
-          a(href='http://www.google.com') Interpreters
-        li
-          a(href='http://www.google.com') Contact
-        li
-          a(href='http://www.google.com') Qualifications
-        li
-          a(href='http://www.google.com') Fees
-        li
-          a(href='http://www.google.com') Infomation
-        li
-          a(href='http://www.google.com') Links
+        each url, page in pages
+          if page==navTitle
+            li.active
+              a(href= url title= page)= page
+          else 
+            li
+              a(href= url title= page)= page
