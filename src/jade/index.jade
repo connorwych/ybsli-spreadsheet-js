@@ -15,15 +15,7 @@ html
         .main
           .row
             .lcolumn.col-md-12
-                if pageName=="index" 
-                  ol 
-                    li
-                      a(href='index.html')= pageTitle
-                else 
-                  ol
-                    li Yorkshire BSL Interpreters
-                    li= pageTitle
-                
+              include breadcrumb.jade      
             .lcolumn.col-md-8
               h1  Yorkshire BSL Interpreters 
               p
